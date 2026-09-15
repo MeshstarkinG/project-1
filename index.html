@@ -8,10 +8,35 @@
 </head>
 <body>
     <main class="app-shell">
-        <header class="site-header"><a class="wordmark" href=".">IPT<span>//</span>01</a><p class="header-note">THE INTERNET IS WATCHING<br><strong>ARE YOU?</strong></p></header>
-        <section id="intro-screen" class="screen intro-screen"><div class="intro-copy"><p class="eyebrow">A FIELD GUIDE TO YOUR ONLINE SELF</p><h1>당신은 인터넷에서<br><em>어떤 사람</em>인가요?</h1><p class="intro-description">12개의 질문으로 온라인 습관, 취향, 태도를 탐색합니다. 정답은 없고, 당신의 인터넷 자아만 있습니다.</p><button id="start-btn" class="primary-button">테스트 시작하기 <span>→</span></button><p class="meta-line">12 QUESTIONS <i></i> ABOUT 3 MINUTES <i></i> NO LOGIN</p></div><div class="intro-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-label label-top">ONLINE<br>IDENTITY</span><span class="art-label label-bottom">SCROLL<br>TO KNOW</span><div class="signal">✳</div></div></section>
-        <section id="quiz-screen" class="screen quiz-screen is-hidden"><div class="quiz-topline"><span id="question-counter">01 / 12</span><div class="progress-track"><div id="progress-bar"></div></div><span class="progress-label">DISCOVERING</span></div><div class="question-layout"><div class="question-index" id="question-index">01</div><div class="question-content"><p class="eyebrow">QUESTION <span id="question-number">01</span></p><h2 id="question-text"></h2><div id="choices" class="choices"></div></div></div></section>
-        <section id="result-screen" class="screen result-screen is-hidden"><div class="result-heading"><p class="eyebrow">YOUR INTERNET PERSONA IS</p><h2 id="result-name"></h2><p id="result-tagline" class="result-tagline"></p></div><div class="result-grid"><div class="result-card result-summary"><p id="result-description"></p><div id="result-tags" class="result-tags"></div></div><div class="result-card dimensions-card"><div class="card-label">YOUR DIMENSION MAP <span>10 AXES</span></div><div id="dimension-bars"></div></div></div><div class="result-actions"><button id="restart-btn" class="secondary-button">다시 테스트하기</button><button id="simulation-btn" class="text-button">알고리즘 시뮬레이션 보기 →</button></div><div id="simulation-panel" class="simulation-panel is-hidden"><div class="card-label">10,000 RANDOM ANSWERS <span>DISTRIBUTION CHECK</span></div><p id="simulation-summary"></p><div id="simulation-results"></div></div></section>
+        <header class="site-header">
+            <a class="wordmark" href="." aria-label="Internet Personality Test home">IPT<span>//</span>01</a>
+            <div class="header-status"><span class="status-dot"></span><span>OPEN STUDY</span></div>
+            <p class="header-note">THE INTERNET IS WATCHING<br><strong>ARE YOU?</strong></p>
+        </header>
+        <section id="intro-screen" class="screen intro-screen" aria-labelledby="home-title">
+            <div class="intro-copy">
+                <p class="eyebrow">A FIELD GUIDE TO YOUR ONLINE SELF</p>
+                <h1 id="home-title">당신은 인터넷에서<br><em>어떤 사람</em>인가요?</h1>
+                <p class="intro-description">12개의 질문으로 온라인 습관, 취향, 태도를 탐색합니다. 정답은 없고, 당신의 인터넷 자아만 있습니다.</p>
+                <button id="start-btn" class="primary-button">테스트 시작하기 <span aria-hidden="true">→</span></button>
+                <div class="meta-line"><span>12 QUESTIONS</span><i></i><span>ABOUT 3 MINUTES</span><i></i><span>NO LOGIN</span></div>
+            </div>
+            <div class="intro-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-label label-top">ONLINE<br>IDENTITY</span><span class="art-label label-bottom">SCROLL<br>TO KNOW</span><div class="signal">✳</div></div>
+        </section>
+        <section id="quiz-screen" class="screen quiz-screen is-hidden" aria-labelledby="question-text">
+            <div class="quiz-topline"><span id="question-counter">01 / 12</span><div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div><span class="progress-label">DISCOVERING</span></div>
+            <div class="question-layout"><div class="question-index" id="question-index" aria-hidden="true">01</div><div class="question-content"><div class="question-heading"><p class="eyebrow">QUESTION <span id="question-number">01</span></p><p class="answer-hint">하나를 선택해 주세요</p></div><h2 id="question-text"></h2><div id="choices" class="choices" role="group" aria-label="답변 선택지"></div></div></div>
+            <div id="completion-state" class="completion-state is-hidden">
+                <p class="eyebrow">YOUR INTERNET PERSONA IS</p>
+                <h2 id="result-name"></h2>
+                <p id="result-tagline" class="result-tagline"></p>
+                <div class="result-layout">
+                    <div class="result-summary"><p id="result-description"></p><div id="result-tags" class="result-tags"></div></div>
+                    <div class="dimension-card"><div class="card-label">YOUR DIMENSION MAP <span>10 AXES</span></div><div id="dimension-bars"></div></div>
+                </div>
+                <button id="home-btn" class="secondary-button">홈으로 돌아가기</button>
+            </div>
+        </section>
     </main>
     <script src="simulation.js"></script>
     <script src="main.js"></script>
