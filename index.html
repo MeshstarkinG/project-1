@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTERNET PERSONALITY TEST</title>
+    <title>인터넷 성격 테스트 | Internet Personality Test</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="app-shell">
         <header class="site-header">
             <a class="wordmark" href="." aria-label="Internet Personality Test home">IPT<span>//</span>01</a>
-            <div class="header-status"><span class="status-dot"></span><span>OPEN STUDY</span></div>
-            <p class="header-note">THE INTERNET IS WATCHING<br><strong>ARE YOU?</strong></p>
+            <div class="header-status"><span class="status-dot"></span><span id="header-status-text">OPEN STUDY</span></div>
+            <div class="language-switch" role="group" aria-label="Language selection"><button id="lang-ko" class="language-button is-active" type="button">한국어</button><span>/</span><button id="lang-en" class="language-button" type="button">EN</button></div>
+            <p class="header-note" id="header-note">THE INTERNET IS WATCHING<br><strong>ARE YOU?</strong></p>
         </header>
         <section id="intro-screen" class="screen intro-screen" aria-labelledby="home-title">
             <div class="intro-copy">
-                <p class="eyebrow">A FIELD GUIDE TO YOUR ONLINE SELF</p>
+                <p class="eyebrow" data-i18n="homeEyebrow">A FIELD GUIDE TO YOUR ONLINE SELF</p>
                 <h1 id="home-title">당신은 인터넷에서<br><em>어떤 사람</em>인가요?</h1>
-                <p class="intro-description">12개의 질문으로 온라인 습관, 취향, 태도를 탐색합니다. 정답은 없고, 당신의 인터넷 자아만 있습니다.</p>
-                <button id="start-btn" class="primary-button">테스트 시작하기 <span aria-hidden="true">→</span></button>
-                <div class="meta-line"><span>12 QUESTIONS</span><i></i><span>ABOUT 3 MINUTES</span><i></i><span>NO LOGIN</span></div>
+                <p class="intro-description" data-i18n="homeDescription">12개의 질문으로 온라인 습관, 취향, 태도를 탐색합니다. 정답은 없고, 당신의 인터넷 자아만 있습니다.</p>
+                <button id="start-btn" class="primary-button"><span data-i18n="startTest">테스트 시작하기</span> <span aria-hidden="true">→</span></button>
+                <div class="meta-line"><span data-i18n="questionsMeta">12 QUESTIONS</span><i></i><span data-i18n="timeMeta">ABOUT 3 MINUTES</span><i></i><span data-i18n="loginMeta">NO LOGIN</span></div>
             </div>
-            <div class="intro-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-label label-top">ONLINE<br>IDENTITY</span><span class="art-label label-bottom">SCROLL<br>TO KNOW</span><div class="signal">✳</div></div>
+            <div class="intro-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-label label-top" id="art-label-top">ONLINE<br>IDENTITY</span><span class="art-label label-bottom" id="art-label-bottom">SCROLL<br>TO KNOW</span><div class="signal">✳</div></div>
         </section>
         <section id="quiz-screen" class="screen quiz-screen is-hidden" aria-labelledby="question-text">
-            <div class="quiz-topline"><span id="question-counter">01 / 12</span><div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div><span class="progress-label">DISCOVERING</span></div>
-            <div class="question-layout"><div class="question-index" id="question-index" aria-hidden="true">01</div><div class="question-content"><div class="question-heading"><p class="eyebrow">QUESTION <span id="question-number">01</span></p><p class="answer-hint">하나를 선택해 주세요</p></div><h2 id="question-text"></h2><div id="choices" class="choices" role="group" aria-label="답변 선택지"></div></div></div>
+            <div class="quiz-topline"><span id="question-counter">01 / 12</span><div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div><span class="progress-label" data-i18n="discovering">DISCOVERING</span></div>
+            <div class="question-layout"><div class="question-index" id="question-index" aria-hidden="true">01</div><div class="question-content"><div class="question-heading"><p class="eyebrow"><span data-i18n="questionLabel">QUESTION</span> <span id="question-number">01</span></p><p class="answer-hint" data-i18n="answerHint">하나를 선택해 주세요</p></div><h2 id="question-text"></h2><div id="choices" class="choices" role="group" aria-label="답변 선택지"></div></div></div>
             <div id="completion-state" class="completion-state is-hidden">
-                <p class="eyebrow">YOUR INTERNET PERSONA IS</p>
-                <h2 id="result-name"></h2>
-                <p id="result-tagline" class="result-tagline"></p>
+                <div class="result-hero">
+                    <p class="eyebrow" data-i18n="resultEyebrow">YOUR INTERNET PERSONA IS</p>
+                    <span id="result-type-number" class="result-type-number">TYPE 02</span>
+                    <h2 id="result-name"></h2>
+                    <p id="result-tagline" class="result-tagline"></p>
+                </div>
                 <div class="result-layout">
                     <div class="result-summary"><p id="result-description"></p><div id="result-tags" class="result-tags"></div></div>
-                    <div class="dimension-card"><div class="card-label">YOUR DIMENSION MAP <span>10 AXES</span></div><div id="dimension-bars"></div></div>
+                    <div class="identity-details">
+                        <div class="identity-detail"><span class="detail-label" data-i18n="strongestTraits">STRONGEST TRAITS</span><strong id="result-traits"></strong></div>
+                        <div class="identity-detail"><span class="detail-label" data-i18n="superpower">SUPERPOWER</span><strong id="result-superpower"></strong></div>
+                        <div class="identity-detail"><span class="detail-label" data-i18n="weakness">WEAKNESS</span><strong id="result-weakness"></strong></div>
+                        <div class="identity-detail"><span class="detail-label" data-i18n="vibe">VIBE</span><strong id="result-vibe"></strong></div>
+                        <div class="identity-detail"><span class="detail-label" data-i18n="digitalAnimal">DIGITAL ANIMAL</span><strong id="result-animal"></strong></div>
+                        <div class="identity-detail"><span class="detail-label" data-i18n="idealCity">IDEAL CITY</span><strong id="result-city"></strong></div>
+                    </div>
+                    <div class="dimension-card"><div class="card-label"><span data-i18n="dimensionMap">YOUR DIMENSION MAP</span> <span data-i18n="axes">10 AXES</span></div><div id="dimension-bars"></div></div>
                 </div>
-                <button id="home-btn" class="secondary-button">홈으로 돌아가기</button>
+                <div class="identity-card-section">
+                    <div class="section-heading"><div><p class="eyebrow" data-i18n="shareableCard">YOUR SHAREABLE IDENTITY</p><h3 data-i18n="identityCardTitle">A small card for a very online self.</h3></div><span class="aspect-ratio-label">4:5</span></div>
+                    <div class="identity-card-frame"><canvas id="identity-card-canvas" width="800" height="1000" aria-label="Identity card preview"></canvas></div>
+                    <div class="share-actions"><button id="download-card-btn" class="secondary-button" data-i18n="downloadCard">PNG 다운로드</button><button id="copy-link-btn" class="secondary-button" data-i18n="copyLink">결과 링크 복사</button><button id="native-share-btn" class="secondary-button" data-i18n="shareResult">공유하기</button><button id="x-share-btn" class="secondary-button">X</button><button id="whatsapp-share-btn" class="secondary-button">WhatsApp</button></div>
+                </div>
+                <div class="result-footer"><button id="home-btn" class="secondary-button" data-i18n="backHome">홈으로 돌아가기</button><button id="discover-btn" class="primary-button"><span data-i18n="discoverIdentity">Discover YOUR Identity</span><span aria-hidden="true">→</span></button></div>
             </div>
         </section>
     </main>
     <script src="simulation.js"></script>
+    <script src="i18n.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
