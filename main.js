@@ -60,6 +60,7 @@ function renderQuestion() {
     document.getElementById('question-number').textContent = number;
     document.getElementById('question-text').textContent = question.text;
     document.getElementById('progress-bar').style.width = `${(currentQuestion / 12) * 100}%`;
+    document.getElementById('quiz-percent').textContent = `${language === 'en' ? 'BRAIN SCAN' : '뇌 스캔 중'} ${Math.round((currentQuestion / 12) * 100)}%`;
     const choices = document.getElementById('choices');
     choices.innerHTML = '';
     question.choices.forEach((choice, index) => {

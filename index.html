@@ -30,27 +30,36 @@
             </div>
         </section>
         <section id="quiz-screen" class="screen quiz-screen is-hidden" aria-labelledby="question-text">
-            <div class="quiz-topline"><span id="question-counter">01 / 12</span><div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div><span class="progress-label" data-i18n="discovering">DISCOVERING</span></div>
-            <div class="question-layout"><div class="question-index" id="question-index" aria-hidden="true">01</div><div class="question-content"><div class="question-heading"><p class="eyebrow"><span data-i18n="questionLabel">QUESTION</span> <span id="question-number">01</span></p><p class="answer-hint" data-i18n="answerHint">하나를 선택해 주세요</p></div><h2 id="question-text"></h2><div id="choices" class="choices" role="group" aria-label="답변 선택지"></div></div></div>
-            <div id="completion-state" class="completion-state is-hidden">
-                <div class="result-hero">
-                    <p class="eyebrow" data-i18n="resultEyebrow">YOUR INTERNET PERSONA IS</p>
-                    <span id="result-type-number" class="result-type-number">TYPE 02</span>
-                    <h2 id="result-name"></h2>
-                    <p id="result-tagline" class="result-tagline"></p>
-                </div>
-                <div class="result-layout">
-                    <div class="result-summary"><p id="result-description"></p><div id="result-tags" class="result-tags"></div></div>
-                    <div class="identity-details">
-                        <div class="identity-detail"><span class="detail-label" data-i18n="strongestTraits">STRONGEST TRAITS</span><strong id="result-traits"></strong></div>
-                        <div class="identity-detail"><span class="detail-label" data-i18n="superpower">SUPERPOWER</span><strong id="result-superpower"></strong></div>
-                        <div class="identity-detail"><span class="detail-label" data-i18n="weakness">WEAKNESS</span><strong id="result-weakness"></strong></div>
-                        <div class="identity-detail"><span class="detail-label" data-i18n="vibe">VIBE</span><strong id="result-vibe"></strong></div>
-                        <div class="identity-detail"><span class="detail-label" data-i18n="digitalAnimal">DIGITAL ANIMAL</span><strong id="result-animal"></strong></div>
-                        <div class="identity-detail"><span class="detail-label" data-i18n="idealCity">IDEAL CITY</span><strong id="result-city"></strong></div>
+            <div class="quiz-topline"><div class="quiz-stage"><span id="question-counter" class="counter-badge">01 / 12</span><span class="stage-label">STAGE 01</span></div><div class="quiz-signal"><span>✦</span><span id="quiz-percent" data-i18n="discovering">뇌 스캔 중 00%</span></div></div>
+            <div class="quiz-progress-wrap"><div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div><div class="progress-metrics"><span>DOPAMINE LEVEL: CRITICAL</span><span>EST. TIME: 45 SEC</span></div></div>
+            <div class="question-layout"><div class="question-index" id="question-index" aria-hidden="true">01</div><div class="question-content"><article class="question-card"><div class="question-card-head"><div class="window-controls"><i></i><i></i><i></i><b>BRAIN_PROBE_V2.EXE</b></div><span class="question-chip">Q.01 DIGITAL HABIT</span></div><div class="question-heading"><p class="eyebrow"><span data-i18n="questionLabel">QUESTION</span> <span id="question-number">01</span></p><p class="answer-hint" data-i18n="answerHint">하나를 선택해 주세요</p></div><h2 id="question-text"></h2><div class="question-subnote"><span>◷</span> (시간은 이미 새벽 1시 47분...)</div><span class="question-tape">DOPAMINE TRAP!</span></article><div id="choices" class="choices" role="group" aria-label="답변 선택지"></div><div class="quiz-footer"><div class="footer-actions"><button type="button" class="ghost-action" disabled>← 이전 문항으로</button><button type="button" class="skip-action">뇌 과부하? 이 질문 건너뛰기 ↗</button></div><div class="session-stamp"><span>||| | |||| | || ||| &nbsp; SESSION #04829</span><span><i></i> DATA LOGGED</span></div></div></div></div>
+            <div id="completion-state" class="completion-state result-report is-hidden">
+                <div class="report-status"><span>✓ 2025 DIAGNOSIS VERIFIED</span><strong>TOP 3.8% RARE SPECIES</strong></div>
+                <article class="report-card">
+                    <div class="report-window"><span><i></i><i></i><i></i></span><b>DOPAMINE_REPORT_V4.EXE</b><strong>□</strong></div>
+                    <div class="result-hero">
+                        <span id="result-type-number" class="result-type-number">TYPE 02</span>
+                        <p class="eyebrow" data-i18n="resultEyebrow">YOUR INTERNET PERSONA IS</p>
+                        <h2 id="result-name"></h2>
+                        <p id="result-tagline" class="result-tagline"></p>
                     </div>
-                    <div class="dimension-card"><div class="card-label"><span data-i18n="dimensionMap">YOUR DIMENSION MAP</span> <span data-i18n="axes">10 AXES</span></div><div id="dimension-bars"></div></div>
-                </div>
+                    <div class="result-profile">
+                        <div class="avatar-tile" aria-hidden="true">🧟<span>📱</span></div>
+                        <div><span class="profile-status">STATUS: BATTERY 11%</span><p id="result-description"></p></div>
+                    </div>
+                    <div class="result-stats"><div><span>STRONGEST TRAITS</span><strong id="result-traits"></strong></div><div><span>VIBE</span><strong id="result-vibe"></strong></div></div>
+                    <div class="result-layout">
+                        <div class="dimension-card"><div class="card-label"><span>⚡ <span data-i18n="dimensionMap">YOUR DIMENSION MAP</span></span> <span data-i18n="axes">10 AXES</span></div><div id="dimension-bars"></div></div>
+                        <div class="identity-details">
+                            <div class="identity-detail"><span class="detail-label" data-i18n="superpower">SUPERPOWER</span><strong id="result-superpower"></strong></div>
+                            <div class="identity-detail"><span class="detail-label" data-i18n="weakness">WEAKNESS</span><strong id="result-weakness"></strong></div>
+                            <div class="identity-detail"><span class="detail-label" data-i18n="digitalAnimal">DIGITAL ANIMAL</span><strong id="result-animal"></strong></div>
+                            <div class="identity-detail"><span class="detail-label" data-i18n="idealCity">IDEAL CITY</span><strong id="result-city"></strong></div>
+                        </div>
+                    </div>
+                    <div class="fact-blast"><h3>🔥 실시간 팩트 폭격</h3><div><b>01</b><p>당신의 온라인 습관이 만든 <strong>가장 강력한 인터넷 자아</strong>입니다.</p></div><div><b>02</b><p id="result-tags"></p></div></div>
+                    <div class="report-footer"><span>PERSONA.LAB // INTERNET IDENTITY</span><span>||| | |||| | || |||</span></div>
+                </article>
                 <div class="identity-card-section">
                     <div class="section-heading"><div><p class="eyebrow" data-i18n="shareableCard">YOUR SHAREABLE IDENTITY</p><h3 data-i18n="identityCardTitle">A small card for a very online self.</h3></div><span class="aspect-ratio-label">4:5</span></div>
                     <div class="identity-card-frame"><canvas id="identity-card-canvas" width="800" height="1000" aria-label="Identity card preview"></canvas></div>
